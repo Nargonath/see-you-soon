@@ -1,11 +1,16 @@
 import React from 'react';
 import { number } from 'prop-types';
 
+import Numbers from './Numbers';
+import TimeString from './TimeString';
+import TabletBr from 'components/TabletBr';
+
 function DisplayTime({ days, hours, minutes, seconds }) {
   return (
-    <p>
-      {days} days, {hours} hours, {minutes} minutes, {seconds} seconds
-    </p>
+    <TimeString>
+      <Numbers>{days}</Numbers> days,<TabletBr /> <Numbers>{hours}</Numbers> hours,<TabletBr />{' '}
+      <Numbers>{minutes}</Numbers> minutes,<TabletBr /> <Numbers>{seconds}</Numbers> seconds
+    </TimeString>
   );
 }
 
