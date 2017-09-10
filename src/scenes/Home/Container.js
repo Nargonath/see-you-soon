@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { media } from 'styles';
-
 export default styled.div`
   width: 100%;
   height: 100vh;
