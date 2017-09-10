@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Home extends Component {
-  constructor(props) {
-    super(props);
+import Timer from 'components/Timer';
 
-    this.endDate = new Date(2017, 9, 20, 8);
-  }
+function Home() {
+  const endDate = new Date('2017-09-20T08:00:00.000Z');
 
-  render() {
-    return (
-      <div>
-        <h1>See you soon</h1>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <h1>See you soon</h1>
+      <Timer endDate={endDate} />
+    </div>
+  );
 }
 
 export default Home;
