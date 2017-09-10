@@ -17,11 +17,18 @@ class Timer extends Component {
     this.intervalID = setInterval(() => {
       this.totalSec--;
       this.setState({ timeSplit: splitSeconds(this.totalSec) });
+
+      if (this.totalSec <= 0) {
+        clearInterval(this.intervalID);
+        this.intervalID = null;
+      }
     }, 1000);
   }
 
   componentWillUnmount() {
-    clearInterval(this.intervalID);
+    if (this.intervalID !== null) {
+      clearInterval(this.intervalID);
+    }
   }
 
   render() {

@@ -6,6 +6,10 @@ import TimeString from './TimeString';
 import TabletBr from 'components/TabletBr';
 
 function DisplayTime({ days, hours, minutes, seconds }) {
+  if (days === 0 && hours === 0 && minutes === 0 && seconds === 0) {
+    return <TimeString big>This is over for now!</TimeString>;
+  }
+
   return (
     <TimeString>
       <Numbers>{days}</Numbers> days,<TabletBr /> <Numbers>{hours}</Numbers> hours,<TabletBr />{' '}

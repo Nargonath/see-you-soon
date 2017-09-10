@@ -2,7 +2,7 @@ export default function(totalSeconds) {
   let remainingSec = 0;
 
   if (totalSeconds < 0) {
-    return null;
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   }
 
   const secPerDays = 24 * 60 * 60;
